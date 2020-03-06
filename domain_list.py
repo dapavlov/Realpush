@@ -1,0 +1,32 @@
+WEBSITE_LIST = [
+    'adinfo.support',
+    'admessage.support',
+    'allow.support',
+    'bestcaptcha.support',
+    'clicks.support',
+    'dailynews.support',
+    'daynews.support',
+    'dialog.support',
+    'e-captcha.support',
+    'infocenter.support',
+    'infomail.support',
+    'infomessage.support',
+    'lifenews.support',
+    'mailinfo.support',
+    'mailmessage.support',
+    'messagebox.support',
+    'messagefeed.support'
+    'moreinfo.support',
+    'newinfo.support',
+    'new-mail.support'
+    'newmail.support',
+    'new-message.support',
+    'newmessage.support',
+    'newpost.support',
+    'newpush.support',
+    'newsfeed.support',
+    'notify.support',
+    'pushallow.support',
+    'warning.support'
+    'you-captcha.support'
+]
