@@ -1,4 +1,3 @@
-import datetime
 import urllib.parse
 import urllib.request
 
@@ -13,18 +12,16 @@ random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid, random_token = db_connection()
 
-tid_list = ['500', '592', '593']
-random_tid = random.choice(tid_list)
-
-url = 'http://xml.ibizads.com/feed/'
+url = 'http://dsp-proxy-new.prod.news-host.pw/a'
 params = {
-    "type": "push",
-    "tid": random_tid,
-    "ip": random_ip,
-    "ua": user_agent,
-    "subid": random_sid,
-    "format": "json",
-    "sdate": datetime.datetime.today().strftime('%Y-%m-%d')
+    "Id": "729093",
+    "widget_id": "13234",
+    "d_ip": random_ip,
+    "d_page": "",
+    "node": "adnow_realpush",
+    "out": "xml",
+    "sub_id": random_sid,
+    "d_user_agent": user_agent
 }
 query_string = urllib.parse.urlencode(params)
 url = url + "?" + query_string

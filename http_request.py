@@ -5,7 +5,6 @@ import asyncio
 import requests
 from requests_futures import sessions
 
-
 URL = "https://interpaved.com/data.json?dist_id=149&src_id=261764&v=16&l=0"
 TRIES = 100
 

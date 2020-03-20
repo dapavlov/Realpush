@@ -1,4 +1,3 @@
-import datetime
 import urllib.parse
 import urllib.request
 
@@ -13,18 +12,19 @@ random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid, random_token = db_connection()
 
-tid_list = ['500', '592', '593']
-random_tid = random.choice(tid_list)
-
-url = 'http://xml.ibizads.com/feed/'
+url = 'http://xml.ezmob.com/search'
 params = {
-    "type": "push",
-    "tid": random_tid,
-    "ip": random_ip,
-    "ua": user_agent,
+    "feed": "226210",
+    "auth": "cbOpJJ",
     "subid": random_sid,
-    "format": "json",
-    "sdate": datetime.datetime.today().strftime('%Y-%m-%d')
+    "user_ip": random_ip,
+    "url": "http://www.realpush.net",
+    "ua": user_agent,
+    "query": "",
+    "empty": "204",
+    "count": "1",
+    "lang": "en"
+
 }
 query_string = urllib.parse.urlencode(params)
 url = url + "?" + query_string

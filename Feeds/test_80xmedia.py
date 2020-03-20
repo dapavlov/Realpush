@@ -4,12 +4,13 @@ import urllib.request
 from termcolor import colored
 
 from db_actions import *
+from global_param import user_agent
 from http_responses import response_codes
 from ipv4_generator import *
 
 random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
-random_sid, random_ua, random_token = db_connection()
+random_sid, random_token = db_connection()
 
 url = 'http://xml.80xmedia.com/search'
 params = {
@@ -18,7 +19,7 @@ params = {
     "subid": random_sid,
     "query": "best+deals",
     "user_ip": random_ip,
-    "ua": random_ua,
+    "ua": user_agent,
     "url": ""
 }
 query_string = urllib.parse.urlencode(params)
