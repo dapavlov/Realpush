@@ -5,6 +5,7 @@ import urllib.request
 from termcolor import colored
 
 from db_actions import *
+from global_param import user_agent
 from http_responses import response_codes
 from ipv4_generator import *
 
@@ -20,7 +21,7 @@ params = {
     "ua": user_agent,
     "ip": random_ip,
     "subid": random_sid,
-    "lang": random_lang,
+    "lang": "en",
     "date": datetime.datetime.today().strftime('%Y-%m-%d'),
     "uid": ""
 }

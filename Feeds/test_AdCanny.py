@@ -12,15 +12,19 @@ random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid, random_token = db_connection()
 
-url = 'http://realpush.pn.dsp.wtf/custom/1.0/REALPUSH1' \
-      '/4b7498022dd6519e6e3d3a001c04b003f9d5c4bcb8ca42b796f49eaa2b9ce339'
+url = 'http://xml.adcannyxml.com/search'
 params = {
+    "feed": "230218",
+    "auth": "fZ34oY",
+    "subid": random_sid,
+    "user_ip": random_ip,
+    "url": "",
     "ua": user_agent,
-    "user_id": "",
-    random_ip: "en-US",
-    "ip": random_ip,
-    "sd": int(time()),
-    "var": random_sid
+    "query": "",
+    "empty": "204",
+    "count": "3",
+    "lang": "en",
+
 }
 query_string = urllib.parse.urlencode(params)
 url = url + "?" + query_string

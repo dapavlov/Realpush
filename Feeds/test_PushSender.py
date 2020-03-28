@@ -4,6 +4,7 @@ import urllib.request
 from termcolor import colored
 
 from db_actions import *
+from global_param import user_agent
 from http_responses import response_codes
 from ipv4_generator import *
 
@@ -19,7 +20,7 @@ params = {
     "feedId": "6",
     "ip": random_ip,
     "userAgent": user_agent,
-    "subsTimestamp": int(time.time()),
+    "subsTimestamp": int(time()),
     "lang": "en",
     "subId": random_sid,
     "uniqueId": UID

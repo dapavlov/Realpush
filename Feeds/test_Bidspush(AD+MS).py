@@ -6,6 +6,7 @@ import urllib.request
 from termcolor import colored
 
 from db_actions import *
+from global_param import user_agent
 from http_responses import response_codes
 from ipv4_generator import *
 
@@ -13,7 +14,7 @@ random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid, random_token = db_connection()
 
-lid_list = ['112', '113', '189', '190']
+lid_list = ['112', '113', '189', '190', '304', '305']
 random_lid = random.choice(lid_list)
 
 hashed_userid = base64.b64encode(random_token.encode('utf-8', errors='strict'))

@@ -4,6 +4,7 @@ import urllib.request
 from termcolor import colored
 
 from db_actions import *
+from global_param import user_agent
 from http_responses import response_codes
 from ipv4_generator import *
 
@@ -18,7 +19,7 @@ params = {
     "user_id": "",
     "lang": "en",
     "ip": random_ip,
-    "sd": int(time.time()),
+    "sd": int(time()),
     "var": random_sid
 }
 query_string = urllib.parse.urlencode(params)
