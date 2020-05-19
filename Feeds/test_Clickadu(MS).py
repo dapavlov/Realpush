@@ -1,3 +1,5 @@
+from time import time
+
 from termcolor import colored
 
 from Databases.PostgreSQL import run_server
@@ -9,14 +11,14 @@ random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid = run_server()
 
-
-url = 'http://xmlpushrealpushnondir.hilltopadsfeed.com/ask'
+url = 'http://realpush.pn.dsp.wtf/custom/1.0/REALPUSH2' \
+      '/dc488a97bb650167ba3a5860c57c911f5d2142cce9277f4bf61a8a60eb49c902'
 params = {
-    "ip": random_ip,
     "ua": user_agent,
-    "source": random_sid,
-    "sub1": "www.realpush.net",
+    "user_id": "",
     "lang": "en",
-    "limit": "0"
+    "ip": random_ip,
+    "sd": int(time()),
+    "var": random_sid
 }
 fetch(url, params)

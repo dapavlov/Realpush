@@ -7,20 +7,17 @@ from ipv4_generator import *
 
 random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
-random_sid, _ = run_server()
+random_sid = run_server()
 
-url = 'http://xml.ezmob.com/search'
+url = 'http://xml.realtime-bid.com/search'
 params = {
-    "feed": "242060",
-    "auth": "cbOpJJ",
+    "feed": "232890",
+    "auth": "ExpghL",
     "subid": random_sid,
-    "user_ip": random_ip,
-    "url": "http://www.realpush.net",
     "ua": user_agent,
+    "user_ip": random_ip,
     "query": "",
-    "empty": "204",
-    "count": "1",
-    "lang": "en"
-
+    "icon_size": "any",
+    "url": ""
 }
 fetch(url, params)

@@ -9,18 +9,14 @@ random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid, _ = run_server()
 
-url = 'http://xml.ezmob.com/search'
+url = 'http://runative-syndicate.com/api/v2/dsp/bidrequest/Pvq3WJ7ucHZhaFRERFQN5Sxp00bnqGP4'
 params = {
-    "feed": "242060",
-    "auth": "cbOpJJ",
-    "subid": random_sid,
     "user_ip": random_ip,
-    "url": "http://www.realpush.net",
     "ua": user_agent,
+    "count": "3",
     "query": "",
-    "empty": "204",
-    "count": "1",
-    "lang": "en"
-
+    "lang": "en",
+    "format": "json",
+    "adtype": "push"
 }
 fetch(url, params)

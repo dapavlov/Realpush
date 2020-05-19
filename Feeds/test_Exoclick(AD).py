@@ -9,14 +9,19 @@ random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid = run_server()
 
+UID = random.randrange(100000, 999999)
 
-url = 'http://xmlpushrealpushnondir.hilltopadsfeed.com/ask'
+url = 'http://rtb.exoclick.com/rtb.php'
 params = {
+    "idzone": "3595711",
+    "fid": "3b4582d61321990d716dfe6981d3c0041faf4fbf",
     "ip": random_ip,
+    "type": "push_notification",
+    "remote_addr": random_ip,
     "ua": user_agent,
-    "source": random_sid,
-    "sub1": "www.realpush.net",
-    "lang": "en",
-    "limit": "0"
+    "sub": random_sid,
+    "export": "json",
+    "user_id": "",
+    "id": UID
 }
 fetch(url, params)

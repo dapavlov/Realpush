@@ -11,10 +11,10 @@ random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid = run_server()
 
-url = 'http://2001237.bdv-w.bidvertiser.com/BidVertiser.dbm'
+url = 'http://2030248.bdv.bidvertiser.com/BidVertiser.dbm'
 params = {
     "pid": "846826",
-    "bid": "2001237",
+    "bid": "2030248",
     "Kterm": "general",
     "cip": random_ip,
     "maxcount": "1",

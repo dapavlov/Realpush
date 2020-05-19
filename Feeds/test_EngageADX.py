@@ -9,17 +9,17 @@ random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid, _ = run_server()
 
-url = 'http://xml.ezmob.com/search'
+url = 'http://xml.engageadx.com/search'
 params = {
-    "feed": "242060",
-    "auth": "cbOpJJ",
+    "feed": "242091",  # 242096
+    "auth": "Vhqe85",  # EsZOUC
     "subid": random_sid,
     "user_ip": random_ip,
     "url": "http://www.realpush.net",
     "ua": user_agent,
     "query": "",
     "empty": "204",
-    "count": "1",
+    "count": "3",
     "lang": "en"
 
 }

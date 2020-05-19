@@ -8,11 +8,14 @@ from ipv4_generator import *
 random_ip, ip_data = gen_ipv4()
 print(colored(ip_data, 'cyan', attrs=['underline']))
 random_sid, _ = run_server()
+feed_list = ['241827', '241775']
+random_src = random.choice(feed_list)
 
-url = 'http://xml.ezmob.com/search'
+
+url = 'http://xml.pressize.com/search'
 params = {
-    "feed": "242060",
-    "auth": "cbOpJJ",
+    "feed": random_src,
+    "auth": "u909KN",
     "subid": random_sid,
     "user_ip": random_ip,
     "url": "http://www.realpush.net",
